@@ -1819,9 +1819,9 @@ a.product-card-link .product-card {
   }
 
   /* Mobile carousel: horizontal scroll-snap */
-  .grid-4.mobile-carousel {
-    display: flex;
-    grid-template-columns: none;
+  .mobile-carousel {
+    display: flex !important;
+    grid-template-columns: none !important;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -1830,8 +1830,8 @@ a.product-card-link .product-card {
     margin: 0 -1.25rem;
     scrollbar-width: none;
   }
-  .grid-4.mobile-carousel::-webkit-scrollbar { display: none; }
-  .grid-4.mobile-carousel > .card {
+  .mobile-carousel::-webkit-scrollbar { display: none; }
+  .mobile-carousel > * {
     flex: 0 0 82%;
     scroll-snap-align: center;
   }
