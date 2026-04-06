@@ -1818,6 +1818,24 @@ a.product-card-link .product-card {
     grid-template-columns: 1fr;
   }
 
+  /* Mobile carousel: horizontal scroll-snap */
+  .grid-4.mobile-carousel {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 0.5rem 1.25rem 1.5rem;
+    margin: 0 -1.25rem;
+    scrollbar-width: none;
+  }
+  .grid-4.mobile-carousel::-webkit-scrollbar { display: none; }
+  .grid-4.mobile-carousel > .card {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
+  }
+
   .stats { grid-template-columns: repeat(2, 1fr); }
 
   .footer-content { grid-template-columns: 1fr; gap: 2rem; }
