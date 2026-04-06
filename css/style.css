@@ -586,78 +586,42 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
   margin-top: 0.8rem;
 }
 
-/* Product card color variants row */
-.product-color-variants {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3px;
-  margin-top: 3px;
-}
-
-.product-color-variants .variant-thumb {
-  aspect-ratio: 1 / 1;
-  background: var(--color-bg-elevated);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.product-color-variants .variant-thumb:hover {
-  opacity: 0.85;
-}
-
-.product-color-variants .variant-thumb .variant-color {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255,255,255,0.2);
-  flex-shrink: 0;
-}
-
-body.theme-light .product-color-variants .variant-thumb {
-  background: #f5f0ea;
-}
-
-body.theme-light .product-color-variants .variant-thumb .variant-color {
-  border-color: rgba(0,0,0,0.08);
-}
-
-/* Available in X colors label */
-.product-image .color-count {
-  position: absolute;
-  top: 1rem;
-  left: 1.2rem;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  color: #1a1a1a;
-  z-index: 3;
-}
-
-/* Product info layout - name and price side by side */
-.product-info-row {
+/* Product card footer - name left, color swatches right */
+.product-card-footer {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  padding: 1.2rem 1.5rem;
+  align-items: center;
+  padding: 1rem 1.2rem;
 }
 
-.product-info-row .product-name {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 600;
+.product-card-footer .product-name {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
   color: #1a1a1a;
+  letter-spacing: 0.01em;
 }
 
-.product-info-row .product-price-tag {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #1a1a1a;
+.product-card-footer .card-swatches {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.product-card-footer .card-swatch {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.product-card-footer .card-swatch:hover {
+  transform: scale(1.2);
+}
+
+.product-card-footer .card-swatch.active {
+  border: 1.5px solid #1a1a1a;
 }
 
 /* --- Manifesto / Text Blocks --- */
